@@ -1,0 +1,29 @@
+{
+    "back": "Назад",
+    "zodiac": {
+      "aries": "Овен",
+      "aries_period": "21 марта - 19 апреля",
+      "taurus": "Телец",
+      "taurus_period": "20 апреля - 20 мая",
+      "gemini": "Близнецы",
+      "gemini_period": "21 мая - 20 июня",
+      "cancer": "Рак",
+      "cancer_period": "21 июня - 22 июля",
+      "leo": "Лев",
+      "leo_period": "23 июля - 22 августа",
+      "virgo": "Дева",
+      "virgo_period": "23 августа - 22 сентября",
+      "libra": "Весы",
+      "libra_period": "23 сентября - 22 октября",
+      "scorpio": "Скорпион",
+      "scorpio_period": "23 октября - 21 ноября",
+      "sagittarius": "Стрелец",
+      "sagittarius_period": "22 ноября - 21 декабря",
+      "capricorn": "Козерог",
+      "capricorn_period": "22 декабря - 19 января",
+      "aquarius": "Водолей",
+      "aquarius_period": "20 января - 18 февраля",
+      "pisces": "Рыбы",
+      "pisces_period": "19 февраля - 20 марта"
+    }
+  }

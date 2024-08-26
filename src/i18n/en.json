@@ -1,0 +1,29 @@
+{
+    "back": "Back",
+    "zodiac": {
+      "aries": "Aries",
+      "aries_period": "March 21 - April 19",
+      "taurus": "Taurus",
+      "taurus_period": "April 20 - May 20",
+      "gemini": "Gemini",
+      "gemini_period": "May 21 - June 20",
+      "cancer": "Cancer",
+      "cancer_period": "June 21 - July 22",
+      "leo": "Leo",
+      "leo_period": "July 23 - August 22",
+      "virgo": "Virgo",
+      "virgo_period": "August 23 - September 22",
+      "libra": "Libra",
+      "libra_period": "September 23 - October 22",
+      "scorpio": "Scorpio",
+      "scorpio_period": "October 23 - November 21",
+      "sagittarius": "Sagittarius",
+      "sagittarius_period": "November 22 - December 21",
+      "capricorn": "Capricorn",
+      "capricorn_period": "December 22 - January 19",
+      "aquarius": "Aquarius",
+      "aquarius_period": "January 20 - February 18",
+      "pisces": "Pisces",
+      "pisces_period": "February 19 - March 20"
+    }
+  }

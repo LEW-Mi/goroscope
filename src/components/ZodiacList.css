@@ -1,0 +1,13 @@
+.zodiac-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .zodiac-card {
+      width: 100%;
+      max-width: 100%;
+    }
+  }

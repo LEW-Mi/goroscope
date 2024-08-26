@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import ZodiacList from './components/ZodiacList';
+import HoroscopeDetail from './components/HoroscopeDetail';
+import axios from 'axios';
+import './i18n';
 import './App.css';
 
-function App() {
+const App = () => {
+  const { i18n } = useTranslation();
+  const [selectedZodiac, setSelectedZodiac] = useState(null);
+  const [horoscope, setHoroscope] = useState('');
+
+  const fetchHoroscope = async (sign) => {
+    try {
+      const response = await axios.post('https://poker247tech.ru/get_horoscope/', {
+        sign,
+        language: i18n.language === 'ru' ? 'original' : 'translated',
+        period: 'today',
+      });
+      setHoroscope(response.data.description);
+      setSelectedZodiac(sign);
+    } catch (error) {
+      console.error('Error fetching horoscope:', error);
+    }
+  };
+
+  const handleBack = () => {
+    setSelectedZodiac(null);
+    setHoroscope('');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {selectedZodiac ? (
+        <HoroscopeDetail sign={selectedZodiac} description={horoscope} onBack={handleBack} />
+      ) : (
+        <ZodiacList onZodiacClick={fetchHoroscope} />
+      )}
+      <button onClick={() => i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')}>
+        {i18n.language === 'ru' ? 'EN' : 'RU'}
+      </button>
     </div>
   );
-}
+};
 
 export default App;
