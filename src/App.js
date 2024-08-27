@@ -18,8 +18,9 @@ const App = () => {
         language: i18n.language === 'ru' ? 'original' : 'translated',
         period: 'today',
       });
-      setHoroscope(response.data.description);
-      setSelectedZodiac(sign);
+      console.log('API Response:', response.data); // Выводим весь ответ от API
+      setHoroscope(response.data.horoscope); // Устанавливаем описание в состояние
+      setSelectedZodiac(sign); // Устанавливаем выбранный знак в состояние
     } catch (error) {
       console.error('Error fetching horoscope:', error);
     }
